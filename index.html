@@ -22,6 +22,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Start Options  -->
+    <div class="options">
+        <div class="toggle-btn">
+            <i class="fas fa-cog"></i>
+        </div>
+        <h3>Colors</h3>
+        <div class="colors">
+            <!-- Color-1 -->
+            <div class="color" id="#05C2C9"></div>
+            <!-- Color-3 -->
+            <div class="color" id="#673ab7"></div>
+            <!-- Color-4 -->
+            <div class="color" id="#3f51b5"></div>
+        </div>
+    </div>
+    <!-- End Options  -->
     <!-- -------------------- Start Header -------------------- -->
     <header class="header" id="header">
         <div class="container">
@@ -175,70 +191,155 @@
         <h2 class="main-title">Projects</h2>
         <div class="container">
             <ul class="lang">
-                <li>All</li>
-                <li>HTML / CSS</li>
-                <li>JavaScript</li>
-                <li>React-JS</li>
+                <li class="active" id="all">All</li>
+                <li id="html-css">HTML / CSS</li>
+                <li id="js">JavaScript</li>
+                <li id="react">React-JS</li>
             </ul>
             <div class="gallery">
                 <!-- Pro-1 -->
-                <div class="pro html-css">
+                <div class="pro html-css all">
                     <img src="pic/pro/html-css/1- le-1.jpg" alt="">
                     <a href="https://mohammedgomaa22.github.io/My-First-Design/" aria-label="Show leaon For Design" target="_blank">
                         <i class="fab fa-golang"></i>
                     </a>
                 </div>
                 <!-- Pro-2 -->
-                <div class="pro html-css">
+                <div class="pro html-css all">
                     <img src="pic/pro/html-css/2- ple-2.jpg" alt="">
                     <a href="https://mohammedgomaa22.github.io/My-Second-Page/" aria-label="Show ples For Design" target="_blank">
                         <i class="fab fa-golang"></i>
                     </a>
                 </div>
                 <!-- Pro-3 -->
-                <div class="pro html-css">
+                <div class="pro html-css all">
                     <img src="pic/pro/html-css/3- maz-3.jpg" alt="">
                     <a href="https://mohammedgomaa22.github.io/Mazzika-templete-3/" aria-label="Show mazzika For Design" target="_blank">
                         <i class="fab fa-golang"></i>
                     </a>
                 </div>
                 <!-- Pro-4 -->
-                <div class="pro html-css">
+                <div class="pro html-css all">
                     <img src="pic/pro/html-css/4- boo-4.jpg" alt="">
                     <a href="https://mohammedgomaa22.github.io/HTML-And-CSS-Template-4-Books-/" aria-label="Show book For Design" target="_blank">
                         <i class="fab fa-golang"></i>
                     </a>
                 </div>
                 <!-- Pro-5 -->
-                <div class="pro html-css">
+                <div class="pro html-css all">
                     <img src="pic/pro/html-css/5- elz-5.jpg" alt="">
                     <a href="https://mohammedgomaa22.github.io/HTML-And-CSS-Template-5-M.G-/#" aria-label="Show elzero For Design" target="_blank">
                         <i class="fab fa-golang"></i>
                     </a>
                 </div>
                 <!-- Pro-6 -->
-                <div class="pro js">
+                <div class="pro js all">
                     <img src="pic/pro/js/1- note-1.jpg" alt="">
                     <a href="https://mohammedgomaa22.github.io/Notes/" aria-label="Show note For Design" target="_blank">
                         <i class="fab fa-golang"></i>
                     </a>
                 </div>
                 <!-- Pro-7 -->
-                <div class="pro react soon">
+                <div class="pro react all">
                     Soon
                 </div>
                 <!-- Pro-8 -->
-                <div class="pro react soon">
+                <div class="pro react all">
                     Soon
                 </div>
                 <!-- Pro-9 -->
-                <div class="pro react soon">
+                <div class="pro react all">
                     Soon
                 </div>
             </div>
         </div>
     </section>
     <!-- -------------------- End Projects -------------------- -->
+    <!-- -------------------- Start Blog -------------------- -->
+    <section class="blog" id="blog">
+        <h2 class="main-title">Blog</h2>
+        <div class="container">
+            <!-- BOX-1 -->
+            <div class="box">
+                <a href="https://medium.com/@wildayk/breaking-coders-block-44b2e3b0b69e" aria-label="Show Breaking your coder's block" target="_blank">
+                    <img src="pic/blog/1- coder.jpg" alt="">
+                    <div class="text">
+                        <h3>Breaking your coder's block</h3>
+                        <span class="date">Jul 12, 2020</span>
+                        <span class="line"></span>
+                        <p>At noe time or another as a developer we've all found ourselves hopelessly stuck on a coding issue...</p>
+                    </div>
+                </a>
+            </div>
+            <!-- BOX-2 -->
+            <div class="box">
+                <a href="https://www.sleepfoundation.org/sleep-faqs/how-to-stay-awake" aria-label="Show How to Stay Awake" target="_blank">
+                    <img src="pic/blog/2- awake.jpg" alt="">
+                    <div class="text">
+                        <h3>!Awake: This is Your Brain on Caffeine</h3>
+                        <span class="date">March 02, 2023</span>
+                        <span class="line"></span>
+                        <p>if there's one thing I can truly claim to be an expert on it's stying awake For five years I struggled to stay employed...</p>
+                    </div>
+                </a>
+            </div>
+            <!-- BOX-3 -->
+            <div class="box">
+                <a href="https://surajondev.com/2023/03/09/5-essential-google-chrome-extension-for-web-developer/" aria-label="Show 5 Extensions for Your Chrome Toolbelt" target="_blank">
+                    <img src="pic/blog/3- google.jpg" alt="">
+                    <div class="text">
+                        <h3>5 Extensions for Your Chrome Toolbelt</h3>
+                        <span class="date">March 09, 2023</span>
+                        <span class="line"></span>
+                        <p>If you're not using Google Chrome as a front-end web developer you're missing out Not only is Chrome the...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- -------------------- End Blog -------------------- -->
+    <!-- -------------------- Start Contact -------------------- -->
+    <section class="contact" id="contact">
+        <h2 class="main-title">Contact</h2>
+        <div class="container">
+            <p>Have a question or want to work together?</p>
+            <form action="">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="name" placeholder="Enter your email">
+                <textarea name="message" placeholder="Your message"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    <!-- -------------------- End Contact -------------------- -->
+    <!-- -------------------- Start Footer -------------------- -->
+    <section class="footer" id="footer">
+        <a href="#" aria-label="Go Home" class="up">
+            <i class="fas fa-angles-up"></i>
+        </a>
+        <div class="container">
+            <div class="links">
+                <!-- link-1 -->
+                <a href="https://www.linkedin.com/in/mohammed-gomaa-09a31b221/" aria-label="This is my linkedin" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- link-2 -->
+                <a href="https://www.facebook.com/mohammedgomaa2522/" aria-label="This is my facebook" target="_blank" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- link-3 -->
+                <a href="https://www.instagram.com/mohammedgom3a1/" aria-label="This is my instagram" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- link-4 -->
+                <a href="https://twitter.com/Mohamme33782728" aria-label="This is my twitter" target="_blank" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p>Mohammed Gomaa <span>&COPY;2023</span></p>
+        </div>
+    </section>
+    <!-- -------------------- End Footer -------------------- -->
     <!-- JS File -->
     <script src="js/main.js"></script>
 </body>
