@@ -1,9 +1,9 @@
 // Toggle NavBar
 const showNav = () => {
-    const btnTogle = document.querySelector(".navbar .togle"),
+    const btnToggle = document.querySelector(".navbar .toggle"),
         navBar = document.getElementById("nav");
 
-    btnTogle.addEventListener("click", () => {
+    btnToggle.addEventListener("click", () => {
         if (navBar.style.width !== "100%") {
             navBar.style.width = "100%";
         } else {
@@ -19,22 +19,30 @@ const gallery = () => {
         pro = document.querySelectorAll(".gallery .pro");
 
     // Event
-    liG.forEach((ev) => {
-        ev.addEventListener("click", () => {
+    liG.forEach((li) => {
+        li.addEventListener("click", () => {
             // Remove class Name from btn 
-            liG.forEach((ev) => {
-                ev.classList.remove("active");
+            liG.forEach((li) => {
+                li.classList.remove("active");
             });
             // Add class Name to btn 
-            ev.classList.add("active");
-            // Add Element to gallery  
+            li.classList.add("active");
+            // Remove Element to gallery
             pro.forEach((ele) => {
-                if (ele.classList.contains(`${ev.id}`)) {
-                    ele.style.height = "185px";
-                } else {
+                ele.style.cssText = "opacity: 0; transform: rotateX(90deg)";
+                setTimeout(() => {
+                    ele.style.display = "none";
+                }, 500);
+                setTimeout(() => {
                     ele.style.height = "0";
-                }
+                }, 200);
             });
+            // Add Element to gallery
+            setTimeout(() => {
+                document.querySelectorAll(li.dataset.cat).forEach((ele) => {
+                    ele.style.cssText = "display: flex;opacity: 1; height: 185px";
+                });
+            }, 500);
         });
     });
 };
@@ -56,6 +64,10 @@ const options = () => {
     const root = document.querySelector(':root'),
         color = document.querySelectorAll(".options .colors .color");
     // -----------
+    
+    if (localStorage.getItem("color")) {
+        root.style.setProperty('--main-color', localStorage.getItem("color"));
+    }
 
     color.forEach((ev) => {
         ev.addEventListener("click", () => {
@@ -64,9 +76,7 @@ const options = () => {
             window.localStorage.setItem("color", ev.id);
         });
     });
-    if (localStorage.getItem("color")) {
-        root.style.setProperty('--main-color', localStorage.getItem("color"));
-    }
     // End Change color
 };
 options();
+// ---------------------------------------------------------
