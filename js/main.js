@@ -5,7 +5,7 @@ const changeBackground = () => {
     // -------------
     setInterval(() => {
         let changeImg = Math.floor(Math.random() * imgArr.length);
-        header.style.backgroundImage = `url(../pic/${imgArr[changeImg]})`;
+        header.style.backgroundImage = `url(pic/${imgArr[changeImg]})`;
     }, 5000)
 };
 changeBackground();
@@ -61,36 +61,36 @@ const gallery = () => {
 gallery();
 // ---------------------------------------------------------
 // toggle options
-const options = () => {
-    // Start Show Options
-    const opt = document.querySelector(".options"),
-        tgl = document.querySelector(".options .toggle-btn");
-    // -----------
+// const options = () => {
+//     // Start Show Options
+//     const opt = document.querySelector(".options"),
+//         tgl = document.querySelector(".options .toggle-btn");
+//     // -----------
     
-    tgl.addEventListener("click", () => {
-        opt.classList.toggle("active");
-    });
-    // End Show Options
-    // -----------
-    // Start Change color
-    const root = document.querySelector(':root'),
-        color = document.querySelectorAll(".options .colors .color");
-    // -----------
+//     tgl.addEventListener("click", () => {
+//         opt.classList.toggle("active");
+//     });
+//     // End Show Options
+//     // -----------
+//     // Start Change color
+//     const root = document.querySelector(':root'),
+//         color = document.querySelectorAll(".options .colors .color");
+//     // -----------
     
-    if (localStorage.getItem("color")) {
-        root.style.setProperty('--main-color', localStorage.getItem("color"));
-    }
+//     if (localStorage.getItem("color")) {
+//         root.style.setProperty('--main-color', localStorage.getItem("color"));
+//     }
 
-    color.forEach((ev) => {
-        ev.addEventListener("click", () => {
-            // Change Main color variable
-            root.style.setProperty('--main-color', ev.id)
-            window.localStorage.setItem("color", ev.id);
-        });
-    });
-    // End Change color
-};
-options();
+//     color.forEach((ev) => {
+//         ev.addEventListener("click", () => {
+//             // Change Main color variable
+//             root.style.setProperty('--main-color', ev.id)
+//             window.localStorage.setItem("color", ev.id);
+//         });
+//     });
+//     // End Change color
+// };
+// options();
 // ---------------------------------------------------------
 // Scrolling
 const scrolling = () => {
@@ -104,3 +104,16 @@ const scrolling = () => {
 };
 scrolling();
 // ---------------------------------------------------------
+// Scroll To Top
+const scrollToTop = () => {
+    const up = document.querySelector(".up");
+    // -----------------
+    up.onclick = () => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    }
+    // -----------------
+    window.onscroll = function() {
+        this.scrollY >= 800 ? up.classList.add("show"): up.classList.remove("show");
+    }
+}
+scrollToTop();

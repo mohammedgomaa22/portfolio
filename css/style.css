@@ -71,6 +71,26 @@ ul {
     background-color: var(--sec-color);
     z-index: 9999;
 }
+/* UP  */
+.up {
+    position: fixed;
+    bottom: 15px;
+    right: -50px;
+    background-color: #05C2C9;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    z-index: 555;
+}
+.up:hover {
+    background-color: #03a5ab;
+}
+.up.show {
+    right: 15px;
+}
 /* End Scrolling */
 /* End Global Rules */
 /* Start Components */
