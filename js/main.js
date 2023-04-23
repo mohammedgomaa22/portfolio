@@ -1,3 +1,15 @@
+// Change Background img
+const changeBackground = () => {
+    const header = document.querySelector(".header"),
+        imgArr = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+    // -------------
+    setInterval(() => {
+        let changeImg = Math.floor(Math.random() * imgArr.length);
+        header.style.backgroundImage = `url(../pic/${imgArr[changeImg]})`;
+    }, 5000)
+};
+changeBackground();
+// ---------------------------------------------------------
 // Toggle NavBar
 const showNav = () => {
     const btnToggle = document.querySelector(".navbar .toggle"),
@@ -79,4 +91,16 @@ const options = () => {
     // End Change color
 };
 options();
+// ---------------------------------------------------------
+// Scrolling
+const scrolling = () => {
+    const scrolling = document.querySelector(".scrolling"),
+        height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // -------------------------
+    window.addEventListener(("scroll"), () => {
+        let scrollFromTop =  document.documentElement.scrollTop;
+        scrolling.style.width = `${(scrollFromTop / height) * 100}%`;
+    });
+};
+scrolling();
 // ---------------------------------------------------------

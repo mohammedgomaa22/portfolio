@@ -61,6 +61,17 @@ ul {
     }
 }
 /* End Container */
+/* Start Scrolling */
+.scrolling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0;
+    background-color: var(--sec-color);
+    z-index: 9999;
+}
+/* End Scrolling */
 /* End Global Rules */
 /* Start Components */
 /* Start Main Title  */
@@ -157,13 +168,23 @@ ul {
 .header {
     height: 100vh;
     padding: var(--section-padding);
-    background-image: url(../pic/wepik.jpg);
+    background-image: url(../pic/01.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     text-align: center;
+    position: relative;
     z-index: 1;
+}
+.header .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000099;
+    z-index: -1;
 }
 .header .container {
     display: flex;
