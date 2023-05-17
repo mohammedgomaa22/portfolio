@@ -60,37 +60,6 @@ const gallery = () => {
 };
 gallery();
 // ---------------------------------------------------------
-// toggle options
-// const options = () => {
-//     // Start Show Options
-//     const opt = document.querySelector(".options"),
-//         tgl = document.querySelector(".options .toggle-btn");
-//     // -----------
-    
-//     tgl.addEventListener("click", () => {
-//         opt.classList.toggle("active");
-//     });
-//     // End Show Options
-//     // -----------
-//     // Start Change color
-//     const root = document.querySelector(':root'),
-//         color = document.querySelectorAll(".options .colors .color");
-//     // -----------
-    
-//     if (localStorage.getItem("color")) {
-//         root.style.setProperty('--main-color', localStorage.getItem("color"));
-//     }
-
-//     color.forEach((ev) => {
-//         ev.addEventListener("click", () => {
-//             // Change Main color variable
-//             root.style.setProperty('--main-color', ev.id)
-//             window.localStorage.setItem("color", ev.id);
-//         });
-//     });
-//     // End Change color
-// };
-// options();
 // ---------------------------------------------------------
 // Scrolling
 const scrolling = () => {
